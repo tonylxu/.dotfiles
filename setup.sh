@@ -14,7 +14,7 @@ declare -a dotfilenames=(".bash_profile"
 ".condarc"
 ".git"
 ".macos"
-".tmux_conf"
+".tmux.conf"
 ".vimrc"
 ".zshrc"
 )
