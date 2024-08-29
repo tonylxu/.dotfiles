@@ -1,3 +1,3 @@
-#!/bin/bash
-brew leaves > leaves
-brew cask list > casks
+#!/bin/bash 
+xargs brew install < leaves 
+xargs brew install --cask < casks

@@ -9,8 +9,7 @@ if test ! $(which brew); then
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles. Do this for all the .dotfiles
-dotfilenames = (
-".bash_profile"
+declare -a dotfilenames=(".bash_profile"
 ".bashrc"
 ".condarc"
 ".git"
@@ -20,8 +19,8 @@ dotfilenames = (
 ".zshrc"
 )
 
-for dotfile in $(dotfilenanes); do
-	rm -rf $HOME/$(dotfile)
-	ln -sw $HOME/.dotfiles/$(dotfile) $HOME/$(dotfile)
+for dotfile in "${dotfilenames[@]}"
+do
+	rm -rf $HOME/$dotfile
+	ln -s $HOME/.dotfiles/$dotfile $HOME/$dotfile
 done
-
