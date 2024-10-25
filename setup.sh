@@ -24,3 +24,7 @@ do
 	rm -rf $HOME/$dotfile
 	ln -s $HOME/.dotfiles/$dotfile $HOME/$dotfile
 done
+
+# Setup neovim to source .vimrc
+# touch ~/.config/nvim/init.vim
+# echo "source ~/.vimrc" > ~/.config/nvim/init.vim
